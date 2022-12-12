@@ -8,4 +8,11 @@ import { Customer } from "./CutomerApp.model";
 })
 export class CustomerComponent {
   title = 'CustomerAplication';
+  CustomerModel: Customer = new Customer();
+  CustomerModels: Array<Customer> = new Array<Customer>();
+
+  Add(){
+    this.CustomerModels.push(this.CustomerModel)
+    this.CustomerModel = new Customer(); // clear UI
+  }
 }
